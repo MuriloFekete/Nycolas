@@ -1,623 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Experiência Exclusiva | Acompanhante de Luxo</title>
-<meta name="description" content="Página fictícia utilizada como elemento de uma obra literária.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gincana do Mineiro 💋</title>
 <style>
-:root{
-  --bg:#0b0d0f;
-  --panel:#111518;
-  --panel2:#151a1d;
-  --ink:#f4f1e9;
-  --muted:#a9aaa6;
-  --line:#2b2e2f;
-  --accent:#d7ad48;
-  --accent2:#f0ca6a;
-  --dark:#080909;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--ink);
-  font-family:Georgia,"Times New Roman",serif;
-  line-height:1.6;
-}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.top{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:24px 0;
-  border-bottom:1px solid var(--line);
-}
-.logo{
-  font-size:1.05rem;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  text-decoration:none;
-}
-.top-right{
-  color:var(--muted);
-  font:13px/1.4 Arial,sans-serif;
-}
-.hero{
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:54px;
-  align-items:center;
-  padding:58px 0 72px;
-}
-.eyebrow{
-  color:var(--accent);
-  font:700 12px/1.2 Arial,sans-serif;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-  margin-bottom:15px;
-}
-h1{
-  font-size:clamp(2.35rem,6vw,4.65rem);
-  line-height:1.02;
-  letter-spacing:-.035em;
-  margin:0 0 22px;
-}
-.lead{
-  color:var(--muted);
-  max-width:58ch;
-  font:17px/1.75 Arial,sans-serif;
-}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{
-  display:inline-block;
-  padding:13px 19px;
-  border-radius:9px;
-  text-decoration:none;
-  font:700 14px/1 Arial,sans-serif;
-}
-.btn.primary{background:var(--accent);color:#17120a}
-.btn.ghost{border:1px solid var(--line);color:var(--ink)}
-.photo{
-  position:relative;
-  min-height:590px;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#080909;
-  box-shadow:0 30px 70px rgba(0,0,0,.35);
-}
-.photo img{
-  width:100%;
-  height:100%;
-  min-height:590px;
-  display:block;
-  object-fit:cover;
-  object-position:center top;
-}
-.photo .caption{
-  position:absolute;
-  left:18px;
-  right:18px;
-  bottom:18px;
-  padding:13px 15px;
-  border:1px solid rgba(215,173,72,.3);
-  border-radius:10px;
-  background:rgba(8,9,9,.78);
-  backdrop-filter:blur(8px);
-  color:#ddd;
-  font:12px/1.5 Arial,sans-serif;
-}
-.sec{padding:68px 0}
-.sec h2{
-  margin:0 0 28px;
-  font-size:clamp(1.7rem,4vw,2.5rem);
-  letter-spacing:-.02em;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-.card{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:13px;
-  padding:24px;
-}
-.card .icon{color:var(--accent);font-size:20px;margin-bottom:12px}
-.card h3{margin:0 0 8px;font-size:1.08rem}
-.card p{margin:0;color:var(--muted);font:15px/1.7 Arial,sans-serif}
-.steps{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  gap:0;
-  max-width:760px;
-}
-.steps li{
-  display:grid;
-  grid-template-columns:44px 1fr;
-  gap:16px;
-  padding:0 0 28px;
-  position:relative;
-}
-.steps li:not(:last-child)::before{
-  content:"";
-  position:absolute;
-  left:21px;
-  top:44px;
-  bottom:4px;
-  width:2px;
-  background:var(--line);
-}
-.steps b{
-  display:grid;
-  place-items:center;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  background:var(--accent);
-  color:#17120a;
-  font-family:Arial,sans-serif;
-}
-.steps strong{font-size:1rem}
-.steps p{margin:3px 0 0;color:var(--muted);font:15px/1.65 Arial,sans-serif}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-.gallery-card{
-  height:360px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  border-radius:14px;
-  background:var(--panel);
-}
-.gallery-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:transform .35s ease;
-}
-.gallery-card:hover img{transform:scale(1.035)}
-.price{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:44px;
-  align-items:center;
-}
-.big{
-  font-size:clamp(2.8rem,8vw,5rem);
-  font-weight:800;
-  letter-spacing:-.05em;
-  line-height:1;
-}
-.big small{
-  font-size:1rem;
-  font-weight:400;
-  color:var(--muted);
-  letter-spacing:0;
-}
-.price-copy{
-  color:var(--muted);
-  font:15px/1.75 Arial,sans-serif;
-  max-width:52ch;
-  margin-top:18px;
-}
-.calc{
-  background:var(--panel);
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:26px;
-}
-.calc label{
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  font:700 15px/1.4 Arial,sans-serif;
-  margin-bottom:14px;
-}
-.calc input[type=range]{
-  width:100%;
-  accent-color:var(--accent);
-  cursor:pointer;
-}
-.total{
-  font:800 2rem/1.2 Arial,sans-serif;
-  margin-top:16px;
-}
-.hint{
-  color:var(--muted);
-  font:13px/1.55 Arial,sans-serif;
-  margin:7px 0 0;
-}
-.price-list{
-  margin-top:25px;
-  border-top:1px solid var(--line);
-  font:14px/1.4 Arial,sans-serif;
-}
-.price-row{
-  display:flex;
-  justify-content:space-between;
-  padding:11px 0;
-  border-bottom:1px solid var(--line);
-  color:#ddd;
-}
-.price-row span:last-child{color:var(--accent);font-weight:700}
-.note{
-  margin-top:22px;
-  padding:17px;
-  border-left:3px solid var(--accent);
-  background:var(--panel2);
-  color:#bbb;
-  font:14px/1.7 Arial,sans-serif;
-}
-.contact{
-  text-align:center;
-  padding:76px 0;
-  border-top:1px solid var(--line);
-}
-.contact p{
-  color:var(--muted);
-  max-width:58ch;
-  margin:0 auto 25px;
-  font:15px/1.7 Arial,sans-serif;
-}
-footer{
-  border-top:1px solid var(--line);
-  padding:24px 0 35px;
-  color:#777;
-  font:12px/1.6 Arial,sans-serif;
-  text-align:center;
-}
-@media(max-width:820px){
-  .hero,.price{grid-template-columns:1fr;gap:30px}
-  .hero{padding-top:35px}
-  .photo,.photo img{min-height:500px}
-  .grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:560px){
-  .wrap{padding:0 16px}
-  .top-right{display:none}
-  .hero{padding:30px 0 48px}
-  .grid,.gallery{grid-template-columns:1fr}
-  .gallery-card{height:430px}
-  .photo,.photo img{min-height:470px}
-  .sec{padding:48px 0}
-}
-
-.floating-contact{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  z-index:1000;
-  font-family:Arial,sans-serif;
-}
-.contact-bubble{
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:#d7ad48;
-  color:#111;
-  font-size:25px;
-  font-weight:700;
-  border:1px solid #f0ca6a;
-  box-shadow:0 10px 35px rgba(0,0,0,.45);
-  cursor:pointer;
-  text-decoration:none;
-}
-.contact-pop{
-  position:absolute;
-  right:0;
-  bottom:70px;
-  width:275px;
-  padding:19px;
-  border:1px solid #4b3c1e;
-  border-radius:13px;
-  background:#111518;
-  box-shadow:0 20px 55px rgba(0,0,0,.55);
-  display:none;
-}
-.contact-pop.open{display:block}
-.contact-pop h3{margin:0 0 5px;color:#f4f1e9;font:700 16px/1.3 Arial,sans-serif}
-.contact-pop p{margin:0 0 14px;color:#999;font:12px/1.5 Arial,sans-serif}
-.contact-link{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  padding:9px 0;
-  border-top:1px solid #292e2f;
-  text-decoration:none;
-  color:#ddd;
-  font:14px/1.4 Arial,sans-serif;
-}
-.contact-link strong{color:#d7ad48}
-.contact-close{
-  position:absolute;
-  top:8px;
-  right:10px;
-  background:none;
-  border:0;
-  color:#777;
-  cursor:pointer;
-  font-size:18px;
-}
-@media(max-width:560px){
-  .floating-contact{right:14px;bottom:14px}
-  .contact-pop{width:255px}
-}
-
-
-.look-wrap{
-  display:grid;
-  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
-  gap:42px;
-  align-items:center;
-  background:linear-gradient(135deg,#101214,#0b0d0f);
-  border:1px solid var(--line);
-  border-radius:18px;
-  overflow:hidden;
-}
-.look-photo{height:620px;background:#080909}
-.look-photo img{
-  width:100%;height:100%;display:block;object-fit:cover;
-  object-position:center top;
-}
-.look-copy{padding:42px 42px 42px 0}
-.look-copy p{
-  color:var(--muted);
-  font:16px/1.8 Arial,sans-serif;
-  max-width:55ch;
-}
-.look-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}
-.look-tags span{
-  border:1px solid #4b3c1e;
-  border-radius:999px;
-  padding:7px 13px;
-  color:var(--accent);
-  font:12px/1 Arial,sans-serif;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-@media(max-width:820px){
-  .look-wrap{grid-template-columns:1fr}
-  .look-photo{height:560px}
-  .look-copy{padding:30px}
-}
-
+  :root { --gold: #e8c477; --cream: #fff0d0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; overflow: hidden; display: grid; place-items: center;
+    background: radial-gradient(ellipse at center, #21190e 0%, #0b0a08 55%, #030303 100%);
+    color: var(--cream); font-family: Georgia, 'Times New Roman', serif;
+  }
+  .card {
+    width: min(900px, 92vw); text-align: center; padding: 56px 24px;
+    border: 1px solid rgba(232,196,119,.3); border-radius: 24px;
+    background: rgba(12,10,7,.78); box-shadow: 0 0 70px rgba(232,196,119,.08);
+    position: relative; z-index: 1;
+  }
+  .ornament { color: var(--gold); letter-spacing: 8px; margin-bottom: 28px; font-size: 20px; }
+  h1 { font-size: clamp(2.2rem, 6vw, 4.8rem); line-height: 1.12; margin: 0 auto 18px; max-width: 780px; font-weight: 600; }
+  p { color: #c7b99e; font-family: Arial, sans-serif; font-size: 1rem; margin: 0 0 38px; }
+  .play-area { position: relative; width: min(520px, 100%); height: 150px; margin: 0 auto; }
+  button {
+    position: absolute; top: 28px; width: 170px; height: 62px; border-radius: 999px;
+    font-size: 1.35rem; cursor: pointer; transition: left .18s ease, top .18s ease, transform .18s ease;
+    font-family: Georgia, serif;
+  }
+  #yes { left: calc(50% - 185px); border: 1px solid var(--gold); background: linear-gradient(135deg,#f7df9d,#c89b45); color: #211607; box-shadow: 0 0 24px #d5a84b35; }
+  #yes:hover { transform: scale(1.06); }
+  #no { left: calc(50% + 15px); border: 1px solid #9c9588; background: #171614; color: #f4eee3; }
+  #message { min-height: 30px; margin-top: 18px; color: var(--gold); font: 600 1.1rem Arial, sans-serif; }
+  #reset { display:none; position:relative; top:auto; left:auto; width:auto; height:auto; padding:12px 22px; margin: 12px auto 0; border:1px solid #b9a06d; background:transparent; color:var(--cream); font:600 .95rem Arial,sans-serif; }
+  #reset:hover { background:#e8c47718; }
+  .small { margin-top: 18px; font: 12px Arial, sans-serif; color: #756b59; }
+  .confetti { position:fixed; top:-20px; width:10px; height:15px; z-index:5; pointer-events:none; animation: fall linear forwards; }
+  @keyframes fall { to { transform: translate3d(var(--drift), 110vh, 0) rotate(900deg); opacity:.9; } }
+  .card.celebrate { animation: pop .55s ease; }
+  @keyframes pop { 0%{transform:scale(1)} 45%{transform:scale(1.035)} 100%{transform:scale(1)} }
+  .heart { position:fixed; bottom:-40px; z-index:4; pointer-events:none; animation: float-up 2.6s ease-out forwards; }
+  @keyframes float-up { 0%{transform:translateY(0) scale(.6);opacity:0} 15%{opacity:1} 100%{transform:translateY(-110vh) scale(1.4) rotate(25deg);opacity:0} }
+  @media (max-width: 520px) {
+    .card { padding: 42px 14px; }
+    .play-area { height: 190px; }
+    button { width: 135px; }
+    #yes { left: calc(50% - 150px); }
+    #no { left: calc(50% + 15px); }
+  }
+  @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
 </style>
 </head>
 <body>
-<div class="wrap">
-
-<header class="top">
-  <a class="logo" href="#">Experiência Exclusiva</a>
-  <div class="top-right">Discrição · Elegância · Privacidade</div>
-</header>
-
-<section class="hero">
-  <div>
-    <div class="eyebrow">Acompanhante de luxo</div>
-    <h1>Momentos especiais, com discrição e elegância.</h1>
-    <p class="lead">
-      Atendimento exclusivo, com horário previamente agendado e ambiente reservado.
-      Meu objetivo é proporcionar uma companhia agradável, sofisticada e personalizada,
-      respeitando sempre os limites e a privacidade de cada encontro.
-    </p>
-    <div class="cta">
-      <a class="btn primary" href="#preco">Ver valores</a>
-      <a class="btn ghost" href="#galeria">Ver galeria</a>
+  <main class="card" id="card">
+    <div class="ornament">────── ♥ ──────</div>
+    <h1>Você beijaria o Matheus vulgo Mineiro?</h1>
+    <p id="subtitle">Escolha com sinceridade… se conseguir 😏</p>
+    <div class="play-area" id="playArea">
+      <button id="yes" type="button">Sim 💋</button>
+      <button id="no" type="button">Não 🙅</button>
     </div>
-  </div>
-
-  <div class="photo">
-    <img src="images/personagem_principal.png" alt="Personagem principal">
-    <div class="caption">Atendimento exclusivo · Somente com agendamento</div>
-  </div>
-</section>
-
-<section class="sec" id="servicos">
-  <h2>✨ O atendimento inclui</h2>
-  <div class="grid">
-    <div class="card">
-      <div class="icon">✦</div>
-      <h3>Companhia exclusiva</h3>
-      <p>Companhia personalizada para diferentes ocasiões e perfis de encontro.</p>
-    </div>
-    <div class="card">
-      <div class="icon">✦</div>
-      <h3>Conversas e descontração</h3>
-      <p>Um ambiente agradável para conversar, relaxar e aproveitar o momento.</p>
-    </div>
-    <div class="card">
-      <div class="icon">✦</div>
-      <h3>Jantares e eventos</h3>
-      <p>Companhia para jantar, eventos e ocasiões especiais previamente combinadas.</p>
-    </div>
-    <div class="card">
-      <div class="icon">✦</div>
-      <h3>Total discrição</h3>
-      <p>Privacidade e discrição são tratadas como prioridades em cada encontro.</p>
-    </div>
-    <div class="card">
-      <div class="icon">✦</div>
-      <h3>Experiência personalizada</h3>
-      <p>Detalhes do encontro podem ser definidos previamente de acordo com o perfil.</p>
-    </div>
-    <div class="card">
-      <div class="icon">✦</div>
-      <h3>Períodos prolongados</h3>
-      <p>Viagens e períodos prolongados podem ser combinados previamente.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <h2>Como funciona</h2>
-  <ol class="steps">
-    <li>
-      <b>1</b>
-      <div>
-        <strong>Você escolhe o período</strong>
-        <p>Use a calculadora abaixo para visualizar o valor de referência conforme a duração.</p>
-      </div>
-    </li>
-    <li>
-      <b>2</b>
-      <div>
-        <strong>O encontro é combinado previamente</strong>
-        <p>Data, horário, local e demais detalhes são definidos antecipadamente.</p>
-      </div>
-    </li>
-    <li>
-      <b>3</b>
-      <div>
-        <strong>Experiência personalizada</strong>
-        <p>O atendimento é realizado de forma reservada, respeitando os limites e a privacidade de cada encontro.</p>
-      </div>
-    </li>
-  </ol>
-</section>
-
-<section class="sec" id="galeria">
-  <h2>Galeria</h2>
-  <div class="gallery">
-    <div class="gallery-card"><img src="images/personagem_01.jpg" alt="Personagem principal — foto 1"></div>
-    <div class="gallery-card"><img src="images/personagem_02.jpg" alt="Personagem principal — foto 2"></div>
-    <div class="gallery-card"><img src="images/personagem_03.jpg" alt="Personagem principal — foto 3"></div>
-  </div>
-</section>
-
-
-<section class="sec" id="look">
-  <div class="look-wrap">
-    <div class="look-photo">
-      <img src="images/modelo_vestido_luxuoso.jpg" alt="Modelo usando vestido luxuoso preto e dourado">
-    </div>
-    <div class="look-copy">
-      <div class="eyebrow">Estilo & presença</div>
-      <h2>Um visual pensado para ocasiões especiais.</h2>
-      <p>
-        Elegância também está nos detalhes. O look de gala combina preto,
-        dourado e acabamento brilhante para criar uma presença marcante,
-        sofisticada e exclusiva.
-      </p>
-      <div class="look-tags">
-        <span>Luxo</span><span>Gala</span><span>Elegância</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="preco">
-  <div class="price">
-    <div>
-      <div class="eyebrow">💎 Investimento</div>
-      <h2>Escolha a duração</h2>
-      <div class="big">R$ 59,90<small> / 1 hora</small></div>
-      <p class="price-copy">
-        Os períodos abaixo apresentam os valores definidos para o atendimento.
-        Para viagens, deslocamentos e períodos prolongados, os valores podem ser
-        combinados previamente.
-      </p>
-
-      <div class="price-list">
-        <div class="price-row"><span>1 hora</span><span>R$ 59,90</span></div>
-        <div class="price-row"><span>2 horas</span><span>R$ 120,99</span></div>
-        <div class="price-row"><span>4 horas</span><span>R$ 180,99</span></div>
-        <div class="price-row"><span>Período completo / pernoite</span><span>R$ 299,90</span></div>
-      </div>
-    </div>
-
-    <div class="calc">
-      <label for="hours">
-        <span>Horas de atendimento</span>
-        <span id="hoursValue">1 h</span>
-      </label>
-      <input id="hours" type="range" min="1" max="12" step="1" value="1">
-      <div class="total" id="total">R$ 59,00</div>
-      <p class="hint">Arraste a barra para consultar o valor de referência.</p>
-
-      <div class="note">
-        <strong>Observação:</strong> os valores para 1, 2 e 4 horas seguem a tabela
-        acima.
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact">
-  <div class="eyebrow">Agendamento</div>
-  <h2>Atendimento somente com agendamento.</h2>
-  <p>
-    Discrição e privacidade são prioridades. Atendimentos fora da cidade,
-    viagens e períodos prolongados podem ser combinados previamente, com valores
-    definidos de acordo com deslocamento e duração.
-  </p>
-  <span class="btn ghost">Para disponibilidade e reservas, entre em contato antecipadamente.</span>
-</section>
-
-<footer>
-  Página fictícia criada como elemento de uma obra literária.
-</footer>
-
-</div>
-
+    <div id="message" aria-live="polite"></div>
+    <button id="reset" type="button">↻ Escolher novamente</button>
+   
+  </main>
 <script>
-const hours = document.getElementById("hours");
-const hoursValue = document.getElementById("hoursValue");
-const total = document.getElementById("total");
+  const noButton = document.getElementById('no');
+  const yesButton = document.getElementById('yes');
+  const area = document.getElementById('playArea');
+  const message = document.getElementById('message');
+  const resetButton = document.getElementById('reset');
+  const subtitle = document.getElementById('subtitle');
+  const card = document.getElementById('card');
+  let celebrationTimer;
 
-function calculate(){
-  const h = Number(hours.value);
-  let value;
-  if(h === 1) value = 59,90;
-  else if(h === 2) value = 120,99;
-  else if(h === 3) value = 180,99;
-  else if(h === 4) value = 299,90;
-  else value = h * 625;
+  function runAway() {
+    if (yesButton.disabled) return;
+    const maxX = Math.max(0, area.clientWidth - noButton.offsetWidth);
+    const maxY = Math.max(0, area.clientHeight - noButton.offsetHeight);
+    noButton.style.left = Math.random() * maxX + 'px';
+    noButton.style.top = Math.random() * maxY + 'px';
+    noButton.style.transform = `rotate(${Math.random() * 24 - 12}deg)`;
+  }
+  noButton.addEventListener('mouseenter', runAway);
+  noButton.addEventListener('pointerdown', (event) => { event.preventDefault(); runAway(); });
+  noButton.addEventListener('focus', runAway);
 
-  hoursValue.textContent = h + (h === 1 ? " h" : " h");
-  total.textContent = value.toLocaleString("pt-BR", {
-    style:"currency",
-    currency:"BRL"
+  function celebrate() {
+    yesButton.disabled = true;
+    noButton.style.display = 'none';
+    yesButton.style.position = 'relative';
+    yesButton.style.left = 'auto';
+    yesButton.style.top = 'auto';
+    yesButton.style.display = 'block';
+    yesButton.style.margin = '0 auto';
+    yesButton.textContent = 'SIM! 💖';
+    subtitle.textContent = 'Resposta registrada com sucesso!';
+    message.textContent = 'Aí sim! O Mineiro já pode comemorar 😎💖';
+    resetButton.style.display = 'block';
+    card.classList.remove('celebrate');
+    void card.offsetWidth;
+    card.classList.add('celebrate');
+
+    const colors = ['#e8c477', '#fff0d0', '#d85b7a', '#f4f0e8', '#8fc7a5'];
+    for (let i = 0; i < 100; i++) {
+      const piece = document.createElement('span');
+      piece.className = 'confetti';
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+      piece.style.borderRadius = Math.random() > .5 ? '50%' : '2px';
+      piece.style.setProperty('--drift', (Math.random() * 240 - 120) + 'px');
+      piece.style.animationDuration = (2.2 + Math.random() * 2.2) + 's';
+      piece.style.animationDelay = (Math.random() * .7) + 's';
+      document.body.appendChild(piece);
+      setTimeout(() => piece.remove(), 5500);
+    }
+    for (let i = 0; i < 18; i++) {
+      const heart = document.createElement('span');
+      heart.className = 'heart';
+      heart.textContent = ['💖','💋','💕','✨'][Math.floor(Math.random() * 4)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (18 + Math.random() * 24) + 'px';
+      heart.style.animationDelay = (Math.random() * 1.2) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 4500);
+    }
+  }
+
+  yesButton.addEventListener('click', celebrate);
+  resetButton.addEventListener('click', () => {
+    document.querySelectorAll('.confetti, .heart').forEach(el => el.remove());
+    yesButton.disabled = false;
+    yesButton.textContent = 'Sim 💋';
+    yesButton.style.position = 'absolute';
+    yesButton.style.left = window.matchMedia('(max-width: 520px)').matches ? 'calc(50% - 150px)' : 'calc(50% - 185px)';
+    yesButton.style.top = '28px';
+    yesButton.style.margin = '0';
+    noButton.style.display = 'block';
+    noButton.style.left = window.matchMedia('(max-width: 520px)').matches ? 'calc(50% + 15px)' : 'calc(50% + 15px)';
+    noButton.style.top = '28px';
+    noButton.style.transform = 'none';
+    subtitle.textContent = 'Escolha com sinceridade… se conseguir 😏';
+    message.textContent = '';
+    resetButton.style.display = 'none';
+    card.classList.remove('celebrate');
   });
-}
-hours.addEventListener("input", calculate);
-calculate();
-</script>
-
-<div class="floating-contact">
-  <div class="contact-pop" id="contactPop">
-    <button class="contact-close" id="contactClose" aria-label="Fechar">×</button>
-    <h3>Fale comigo</h3>
-    <p>Tire suas dúvidas ou faça sua reserva.</p>
-    <a class="contact-link" href="https://instagram.com/Nycol_asz" target="_blank" rel="noopener">
-      <strong>◎</strong> @Nycol_asz
-    </a>
-    <a class="contact-link" href="https://wa.me/5515981464356" target="_blank" rel="noopener">
-      <strong>◉</strong> +55 15 98146-4356
-    </a>
-  </div>
-  <button class="contact-bubble" id="contactBubble" aria-label="Abrir contato">✆</button>
-</div>
-
-
-<script>
-const contactBubble = document.getElementById("contactBubble");
-const contactPop = document.getElementById("contactPop");
-const contactClose = document.getElementById("contactClose");
-contactBubble.addEventListener("click", () => contactPop.classList.toggle("open"));
-contactClose.addEventListener("click", () => contactPop.classList.remove("open"));
+  window.addEventListener('resize', () => {
+    if (!yesButton.disabled) {
+      noButton.style.left = 'calc(50% + 15px)';
+      noButton.style.top = '28px';
+    }
+  });
 </script>
 </body>
 </html>
